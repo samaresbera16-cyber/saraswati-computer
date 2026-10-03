@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login / Registration | SARASWATI COMPUTER</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f8ff;
+        }
+
+        .auth-section {
+            min-height: calc(100vh - 140px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 20px;
+        }
+
+        .auth-card {
+            width: 100%;
+            max-width: 450px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .auth-logo i {
+            font-size: 45px;
+            color: #1557ff;
+            margin-bottom: 10px;
+        }
+
+        .auth-logo h2 {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0;
+            color: #222;
+        }
+
+        .auth-logo p {
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .input-group-text {
+            background: #f5f7fb;
+            border-right: none;
+        }
+
+        .form-control {
+            height: 48px;
+            border-left: none;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #1557ff;
+        }
+
+        .auth-btn {
+            width: 100%;
+            height: 48px;
+            border: none;
+            border-radius: 8px;
+            background: #1557ff;
+            color: white;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .auth-btn:hover {
+            background: #0d45d8;
+        }
+
+        .switch-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        .switch-text button {
+            border: none;
+            background: none;
+            color: #1557ff;
+            font-weight: 600;
+            padding: 0;
+        }
+
+        .switch-text button:hover {
+            text-decoration: underline;
+        }
+
+        #registerForm {
+            display: none;
+        }
+
+        .password-info {
+            font-size: 12px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .success-message {
+            display: none;
+            padding: 12px;
+            background: #e8fff0;
+            color: #198754;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- AUTH SECTION -->
+<section class="auth-section">
+
+    <div class="auth-card">
+
+        <!-- Logo -->
+        <div class="auth-logo">
+            <i class="fas fa-computer"></i>
+            <h2>SARASWATI COMPUTER</h2>
+            <p id="authSubtitle">Login to your account</p>
+        </div>
+
+        <div id="successMessage" class="success-message">
+            Registration successful! You can now login.
+        </div>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+
+            <div class="mb-3">
+                <label class="form-label">Mobile Number / Email</label>
+
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-user"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="loginUser"
+                        placeholder="Enter mobile or email"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-lock"></i>
+                    </span>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="loginPassword"
+                        placeholder="Enter password"
+                        required
+                    >
+                </div>
+            </div>
+
+            <button type="submit" class="auth-btn">
+                <i class="fas fa-sign-in-alt"></i>
+                Login
+            </button>
+
+            <div class="switch-text">
+                Don't have an account?
+                <button type="button" id="showRegister">
+                    Register
+                </button>
+            </div>
+
+        </form>
+
+
+        <!-- REGISTER FORM -->
+        <form id="registerForm">
+
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-user"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="registerName"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Mobile Number</label>
+
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-phone"></i>
+                    </span>
+
+                    <input
+                        type="tel"
+                        class="form-control"
+                        id="registerMobile"
+                        placeholder="10 digit mobile number"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+
+                <div class="input-group">
+                    <span class="input-group-text">
+                        <i class="fas fa-lock"></i>
+                    </span>
+
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="registerPassword"
+                        placeholder="Create password"
+                        minlength="6"
+                        required
+                    >
+                </div>
+
+                <div class="password-info">
+                    Password must be at least 6 characters.
+                </div>
+            </div>
+
+
+            <button type="submit" class="auth-btn">
+                <i class="fas fa-user-plus"></i>
+                Create Account
+            </button>
+
+
+            <div class="switch-text">
+                Already have an account?
+                <button type="button" id="showLogin">
+                    Login
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<script>
+
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    const showRegister = document.getElementById("showRegister");
+    const showLogin = document.getElementById("showLogin");
+
+    const authSubtitle = document.getElementById("authSubtitle");
+    const successMessage = document.getElementById("successMessage");
+
+
+    // SHOW REGISTER
+    showRegister.addEventListener("click", function () {
+
+        loginForm.style.display = "none";
+        registerForm.style.display = "block";
+
+        authSubtitle.textContent = "Create your account";
+
+        successMessage.style.display = "none";
+    });
+
+
+    // SHOW LOGIN
+    showLogin.addEventListener("click", function () {
+
+        registerForm.style.display = "none";
+        loginForm.style.display = "block";
+
+        authSubtitle.textContent = "Login to your account";
+    });
+
+
+    // REGISTER
+    registerForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("registerName").value.trim();
+        const mobile = document.getElementById("registerMobile").value.trim();
+        const email = document.getElementById("registerEmail").value.trim();
+        const password = document.getElementById("registerPassword").value;
+
+
+        // Mobile validation
+        if (!/^[6-9]\d{9}$/.test(mobile)) {
+
+            alert("Please enter a valid 10-digit Indian mobile number.");
+            return;
+        }
+
+
+        // Save user
+        const user = {
+            name: name,
+            mobile: mobile,
+            email: email,
+            password: password
+        };
+
+        localStorage.setItem(
+            "saraswatiUser",
+            JSON.stringify(user)
+        );
+
+
+        // Clear form
+        registerForm.reset();
+
+
+        // Show login
+        registerForm.style.display = "none";
+        loginForm.style.display = "block";
+
+        authSubtitle.textContent = "Login to your account";
+
+        successMessage.style.display = "block";
+
+    });
+
+
+    // LOGIN
+    loginForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const username =
+            document.getElementById("loginUser").value.trim();
+
+        const password =
+            document.getElementById("loginPassword").value;
+
+
+        const savedUser =
+            JSON.parse(localStorage.getItem("saraswatiUser"));
+
+
+        if (!savedUser) {
+
+            alert("No account found. Please register first.");
+            return;
+        }
+
+
+        if (
+            (username === savedUser.email ||
+             username === savedUser.mobile) &&
+            password === savedUser.password
+        ) {
+
+            localStorage.setItem(
+                "saraswatiLoggedIn",
+                "true"
+            );
+
+            alert("Login successful!");
+
+            window.location.href = "index.html";
+
+        } else {
+
+            alert("Invalid email/mobile or password.");
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

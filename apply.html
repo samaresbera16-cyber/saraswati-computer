@@ -1,0 +1,2237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Apply online for PAN Card, Aadhaar, Passport, Voter ID, Certificate, Railway Ticket and other digital services at Saraswati Computer.">
+
+    <meta name="keywords"
+        content="Saraswati Computer, Apply Online, PAN Card, Aadhaar, Passport, Voter ID, Digital Service">
+
+    <title>Apply Online | SARASWATI COMPUTER</title>
+
+
+    <!-- ================= BOOTSTRAP ================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- ================= FONT AWESOME ================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ================= GOOGLE FONT ================= -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ================= EXISTING CSS ================= -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f8ff;
+            color: #222;
+        }
+
+
+        /* =====================================================
+           APPLY SECTION
+        ===================================================== */
+
+        .apply-section {
+            padding: 70px 0 90px;
+            min-height: 750px;
+            background:
+                radial-gradient(circle at top left,
+                rgba(10, 77, 255, 0.08),
+                transparent 30%),
+                radial-gradient(circle at bottom right,
+                rgba(10, 77, 255, 0.06),
+                transparent 30%),
+                #f5f8ff;
+        }
+
+
+        /* =====================================================
+           PAGE TITLE
+        ===================================================== */
+
+        .apply-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .apply-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 16px;
+            border-radius: 50px;
+
+            background: #eaf0ff;
+            color: #0a4dff;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+        .apply-title h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #081b4b;
+            margin-bottom: 10px;
+        }
+
+        .apply-title h1 span {
+            color: #0a4dff;
+        }
+
+        .apply-title p {
+            max-width: 650px;
+            margin: auto;
+            color: #6b7280;
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           FORM CARD
+        ===================================================== */
+
+        .apply-box {
+            max-width: 1000px;
+            margin: auto;
+
+            background: #fff;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            border: 1px solid #e8edf7;
+
+            box-shadow:
+                0 15px 45px rgba(20, 50, 100, 0.09);
+        }
+
+
+        /* =====================================================
+           FORM HEADER
+        ===================================================== */
+
+        .form-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+
+            border-bottom: 1px solid #edf0f5;
+        }
+
+        .form-heading-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(
+                135deg,
+                #0a4dff,
+                #316cff
+            );
+
+            color: #fff;
+
+            border-radius: 13px;
+
+            font-size: 20px;
+
+            box-shadow:
+                0 8px 20px rgba(10, 77, 255, 0.22);
+        }
+
+        .form-heading h3 {
+            margin: 0;
+
+            font-size: 22px;
+            font-weight: 700;
+
+            color: #081b4b;
+        }
+
+        .form-heading p {
+            margin: 3px 0 0;
+
+            color: #8a94a6;
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           FORM LABEL
+        ===================================================== */
+
+        .form-label {
+            font-weight: 600;
+            color: #273142;
+
+            margin-bottom: 8px;
+
+            font-size: 14px;
+        }
+
+        .required {
+            color: #ef4444;
+        }
+
+
+        /* =====================================================
+           INPUTS
+        ===================================================== */
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-wrapper > i {
+            position: absolute;
+
+            left: 15px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: #8c98aa;
+
+            pointer-events: none;
+
+            z-index: 2;
+        }
+
+        .input-wrapper .form-control {
+            padding-left: 43px;
+        }
+
+        .form-control,
+        .form-select {
+            min-height: 50px;
+
+            border: 1px solid #dce2ec;
+
+            border-radius: 10px;
+
+            padding: 10px 14px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 14px;
+
+            color: #273142;
+
+            background: #fff;
+
+            transition: all 0.25s ease;
+        }
+
+        .form-control::placeholder {
+            color: #a8b0bd;
+        }
+
+        .form-control:hover,
+        .form-select:hover {
+            border-color: #b8c4d8;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #0a4dff;
+
+            box-shadow:
+                0 0 0 4px rgba(10, 77, 255, 0.09);
+
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+
+            resize: vertical;
+
+            padding: 13px 14px;
+        }
+
+        .input-wrapper textarea {
+            padding-left: 43px;
+        }
+
+        .textarea-icon {
+            position: absolute;
+
+            left: 15px;
+            top: 18px;
+
+            color: #8c98aa;
+
+            pointer-events: none;
+        }
+
+
+        /* =====================================================
+           FILE UPLOAD
+        ===================================================== */
+
+        .upload-box {
+            border: 2px dashed #cbd6ea;
+
+            border-radius: 13px;
+
+            padding: 28px 20px;
+
+            text-align: center;
+
+            background: #f9fbff;
+
+            transition: all 0.3s ease;
+        }
+
+        .upload-box:hover {
+            border-color: #0a4dff;
+
+            background: #f5f8ff;
+        }
+
+        .upload-icon {
+            width: 60px;
+            height: 60px;
+
+            margin: 0 auto 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #eaf0ff;
+
+            color: #0a4dff;
+
+            font-size: 25px;
+        }
+
+        .upload-box h6 {
+            margin-bottom: 5px;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            color: #273142;
+        }
+
+        .upload-box p {
+            margin-bottom: 15px;
+
+            color: #8a94a6;
+
+            font-size: 13px;
+        }
+
+        .upload-box .form-control {
+            max-width: 500px;
+
+            margin: auto;
+
+            background: #fff;
+        }
+
+        .file-info {
+            display: block;
+
+            margin-top: 10px;
+
+            color: #7c8798;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .submit-area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            margin-top: 35px;
+            padding-top: 25px;
+
+            border-top: 1px solid #edf0f5;
+        }
+
+        .submit-btn,
+        .reset-btn {
+            min-height: 50px;
+
+            padding: 12px 28px;
+
+            border-radius: 10px;
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.25s ease;
+        }
+
+        .submit-btn {
+            border: none;
+
+            background: linear-gradient(
+                135deg,
+                #0a4dff,
+                #316cff
+            );
+
+            color: #fff;
+
+            box-shadow:
+                0 8px 20px rgba(10, 77, 255, 0.20);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px rgba(10, 77, 255, 0.28);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.75;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+        .reset-btn {
+            border: 1px solid #0a4dff;
+
+            background: #fff;
+
+            color: #0a4dff;
+        }
+
+        .reset-btn:hover {
+            background: #eef3ff;
+        }
+
+
+        /* =====================================================
+           FORM NOTE
+        ===================================================== */
+
+        .form-note {
+            text-align: center;
+
+            margin-top: 18px;
+
+            color: #8a94a6;
+
+            font-size: 12px;
+        }
+
+        .form-note i {
+            color: #16a34a;
+        }
+
+
+        /* =====================================================
+           ALERT
+        ===================================================== */
+
+        .custom-alert {
+            display: none;
+
+            margin-bottom: 25px;
+
+            padding: 13px 16px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .custom-alert.error {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+            color: #be123c;
+        }
+
+        .custom-alert.success {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: #047857;
+        }
+
+
+        /* =====================================================
+           SUCCESS BOX
+        ===================================================== */
+
+        .success-box {
+            display: none;
+
+            max-width: 700px;
+
+            margin: 30px auto 0;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            background: #fff;
+
+            border: 1px solid #d8f1e2;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 15px 40px rgba(20, 100, 60, 0.08);
+
+            animation: successShow 0.5s ease;
+        }
+
+        @keyframes successShow {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .success-icon {
+            width: 75px;
+            height: 75px;
+
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #dcfce7;
+
+            color: #16a34a;
+
+            border-radius: 50%;
+
+            font-size: 38px;
+
+            margin-bottom: 20px;
+        }
+
+        .success-box h3 {
+            color: #166534;
+
+            font-size: 23px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+        .success-box p {
+            color: #667085;
+
+            margin: 7px 0;
+
+            font-size: 14px;
+        }
+
+        .application-id {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 15px 0 8px;
+
+            padding: 12px 22px;
+
+            background: #f1f5ff;
+
+            border: 1px dashed #9db4ff;
+
+            border-radius: 9px;
+
+            color: #0a4dff;
+
+            font-size: 20px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+        }
+
+        .success-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-top: 22px;
+        }
+
+        .track-link,
+        .copy-btn {
+            border: none;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 11px 20px;
+
+            border-radius: 9px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+        .track-link {
+            background: #0a4dff;
+            color: #fff;
+        }
+
+        .track-link:hover {
+            background: #003dcc;
+            color: #fff;
+        }
+
+        .copy-btn {
+            background: #eef3ff;
+            color: #0a4dff;
+        }
+
+        .copy-btn:hover {
+            background: #dfe8ff;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .apply-section {
+                padding: 45px 15px 60px;
+            }
+
+            .apply-title h1 {
+                font-size: 32px;
+            }
+
+            .apply-title p {
+                font-size: 14px;
+            }
+
+            .apply-box {
+                padding: 25px 18px;
+
+                border-radius: 15px;
+            }
+
+            .form-heading h3 {
+                font-size: 19px;
+            }
+
+            .submit-area {
+                flex-direction: column;
+            }
+
+            .submit-btn,
+            .reset-btn {
+                width: 100%;
+            }
+
+            .success-buttons {
+                flex-direction: column;
+            }
+
+            .track-link,
+            .copy-btn {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .apply-title h1 {
+                font-size: 28px;
+            }
+
+            .apply-box {
+                padding: 22px 15px;
+            }
+
+            .form-heading {
+                align-items: flex-start;
+            }
+
+            .form-heading-icon {
+                width: 44px;
+                height: 44px;
+
+                min-width: 44px;
+            }
+
+            .success-box {
+                padding: 30px 18px;
+            }
+
+            .success-box h3 {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="top-left">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            Sealda Market, Mohespur, Ayma Berberya
+
+        </div>
+
+
+        <div class="top-right">
+
+            <a href="tel:+919083732670">
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 9083732670
+
+            </a>
+
+
+            <a href="mailto:saraswaticomputer@gmail.com">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                saraswaticomputer@gmail.com
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
+    <div class="container">
+
+
+        <a class="navbar-brand" href="index.html">
+
+            <strong>SARASWATI COMPUTER</strong>
+
+            <small>Computer Service Center</small>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="services.html">
+
+                        Services
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="apply.html">
+
+                        Apply Online
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="track.html">
+
+                        Track Status
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact.html">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     APPLY SECTION
+===================================================== -->
+
+<section class="apply-section">
+
+    <div class="container">
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="apply-title">
+
+            <div class="apply-badge">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Secure Online Application
+
+            </div>
+
+
+            <h1>
+
+                Apply <span>Online</span>
+
+            </h1>
+
+
+            <p>
+
+                Submit your service request from anywhere.
+                Fill in your details and receive your application ID instantly.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FORM CARD
+        ================================================= -->
+
+        <div
+            class="apply-box"
+            id="formCard">
+
+
+            <!-- FORM HEADER -->
+
+            <div class="form-heading">
+
+                <div class="form-heading-icon">
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+
+                        Application Form
+
+                    </h3>
+
+                    <p>
+
+                        Please provide accurate information.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ALERT -->
+
+            <div
+                class="custom-alert error"
+                id="errorAlert">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <span id="errorMessage"></span>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form
+                id="applicationForm"
+                novalidate>
+
+
+                <div class="row g-4">
+
+
+                    <!-- ================= NAME ================= -->
+
+                    <div class="col-md-6">
+
+                        <label
+                            class="form-label"
+                            for="applicantName">
+
+                            Applicant Name
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="applicantName"
+                                placeholder="Enter your full name"
+                                minlength="3"
+                                maxlength="80"
+                                autocomplete="name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MOBILE ================= -->
+
+                    <div class="col-md-6">
+
+                        <label
+                            class="form-label"
+                            for="mobile">
+
+                            Mobile Number
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                id="mobile"
+                                placeholder="Enter 10 digit mobile number"
+                                maxlength="10"
+                                inputmode="numeric"
+                                autocomplete="tel"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= EMAIL ================= -->
+
+                    <div class="col-md-6">
+
+                        <label
+                            class="form-label"
+                            for="email">
+
+                            Email Address
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                placeholder="Enter email address"
+                                maxlength="100"
+                                autocomplete="email">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= SERVICE ================= -->
+
+                    <div class="col-md-6">
+
+                        <label
+                            class="form-label"
+                            for="service">
+
+                            Select Service
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <select
+                            class="form-select"
+                            id="service"
+                            required>
+
+                            <option value="">
+                                -- Select Service --
+                            </option>
+
+                            <option value="PAN Card Apply">
+                                PAN Card Apply
+                            </option>
+
+                            <option value="Aadhaar Update">
+                                Aadhaar Update
+                            </option>
+
+                            <option value="Voter ID">
+                                Voter ID
+                            </option>
+
+                            <option value="Passport Apply">
+                                Passport Apply
+                            </option>
+
+                            <option value="Driving Licence">
+                                Driving Licence
+                            </option>
+
+                            <option value="Income Certificate">
+                                Income Certificate
+                            </option>
+
+                            <option value="Residential Certificate">
+                                Residential Certificate
+                            </option>
+
+                            <option value="Caste Certificate">
+                                Caste Certificate
+                            </option>
+
+                            <option value="PM Kisan">
+                                PM Kisan
+                            </option>
+
+                            <option value="Pension Service">
+                                Pension Service
+                            </option>
+
+                            <option value="Scholarship">
+                                Scholarship
+                            </option>
+
+                            <option value="Online Form Fill-up">
+                                Online Form Fill-up
+                            </option>
+
+                            <option value="Railway Ticket">
+                                Railway Ticket
+                            </option>
+
+                            <option value="Flight Ticket">
+                                Flight Ticket
+                            </option>
+
+                            <option value="Electricity Bill">
+                                Electricity Bill
+                            </option>
+
+                            <option value="Mobile Recharge">
+                                Mobile Recharge
+                            </option>
+
+                            <option value="Print & Scan">
+                                Print & Scan
+                            </option>
+
+                            <option value="Passport Photo">
+                                Passport Photo
+                            </option>
+
+                            <option value="Lamination">
+                                Lamination
+                            </option>
+
+                            <option value="Other">
+                                Other Service
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- ================= ADDRESS ================= -->
+
+                    <div class="col-12">
+
+                        <label
+                            class="form-label"
+                            for="address">
+
+                            Address
+                            <span class="required">*</span>
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <textarea
+                                class="form-control"
+                                id="address"
+                                placeholder="Enter your complete address"
+                                minlength="10"
+                                maxlength="300"
+                                required></textarea>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= DOCUMENT ================= -->
+
+                    <div class="col-12">
+
+                        <label
+                            class="form-label"
+                            for="document">
+
+                            Upload Document
+
+                        </label>
+
+
+                        <div class="upload-box">
+
+                            <div class="upload-icon">
+
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                            </div>
+
+
+                            <h6>
+
+                                Upload Required Document
+
+                            </h6>
+
+
+                            <p>
+
+                                Upload Aadhaar, PAN, photo or other required document.
+
+                            </p>
+
+
+                            <input
+                                type="file"
+                                class="form-control"
+                                id="document"
+                                accept=".jpg,.jpeg,.png,.pdf">
+
+
+                            <small class="file-info">
+
+                                JPG, JPEG, PNG or PDF • Maximum 5MB
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ================= MESSAGE ================= -->
+
+                    <div class="col-12">
+
+                        <label
+                            class="form-label"
+                            for="message">
+
+                            Additional Message
+
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-message textarea-icon"></i>
+
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                placeholder="Write any additional information..."
+                                maxlength="500"></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ================= BUTTONS ================= -->
+
+                <div class="submit-area">
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                        id="submitBtn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                        <span id="submitText">
+
+                            Submit Application
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        class="reset-btn">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Reset
+
+                    </button>
+
+
+                </div>
+
+
+                <div class="form-note">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Your information is handled securely.
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SUCCESS BOX
+        ================================================= -->
+
+        <div
+            class="success-box"
+            id="successBox">
+
+
+            <div class="success-icon">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+
+            <h3>
+
+                Application Submitted Successfully!
+
+            </h3>
+
+
+            <p>
+
+                Your service request has been received.
+
+            </p>
+
+
+            <p>
+
+                Please save your Application ID:
+
+            </p>
+
+
+            <div
+                class="application-id"
+                id="applicationId">
+
+                --
+
+            </div>
+
+
+            <p>
+
+                Use this ID to track your application status.
+
+            </p>
+
+
+            <div class="success-buttons">
+
+
+                <button
+                    type="button"
+                    class="copy-btn"
+                    id="copyBtn">
+
+                    <i class="fa-solid fa-copy"></i>
+
+                    Copy ID
+
+                </button>
+
+
+                <a
+                    href="track.html"
+                    class="track-link">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Track Application
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row">
+
+
+            <div class="col-lg-4">
+
+                <h3>
+
+                    SARASWATI COMPUTER
+
+                </h3>
+
+
+                <p>
+
+                    Your trusted Digital Service Center for
+                    PAN Card, Aadhaar, Passport, Railway Ticket,
+                    Bill Payment and many more services.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="col-lg-2">
+
+                <h4>
+
+                    Quick Links
+
+                </h4>
+
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="col-lg-3">
+
+                <h4>
+
+                    Our Services
+
+                </h4>
+
+
+                <ul>
+
+                    <li>PAN Card</li>
+
+                    <li>Aadhaar Update</li>
+
+                    <li>Passport</li>
+
+                    <li>PM Kisan</li>
+
+                    <li>Rail Ticket</li>
+
+                    <li>Scholarship</li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="col-lg-3">
+
+                <h4>
+
+                    Contact
+
+                </h4>
+
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 9083732670
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Sealda Market,
+                    Mohespur,
+                    Ayma Berberya
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="copyright">
+
+            © 2026 SARASWATI COMPUTER | All Rights Reserved
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING CALL BUTTON
+===================================================== -->
+
+<a
+    href="tel:+919083732670"
+    class="call-btn"
+    aria-label="Call Saraswati Computer">
+
+    <i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP BUTTON
+===================================================== -->
+
+<a
+    href="https://wa.me/919083732670"
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =====================================================
+     FORM JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const form =
+        document.getElementById("applicationForm");
+
+    const formCard =
+        document.getElementById("formCard");
+
+    const successBox =
+        document.getElementById("successBox");
+
+    const applicationId =
+        document.getElementById("applicationId");
+
+    const errorAlert =
+        document.getElementById("errorAlert");
+
+    const errorMessage =
+        document.getElementById("errorMessage");
+
+    const submitBtn =
+        document.getElementById("submitBtn");
+
+    const submitText =
+        document.getElementById("submitText");
+
+    const copyBtn =
+        document.getElementById("copyBtn");
+
+    const documentInput =
+        document.getElementById("document");
+
+
+    /* =====================================================
+       SHOW ERROR
+    ===================================================== */
+
+    function showError(message) {
+
+        errorMessage.textContent = message;
+
+        errorAlert.style.display = "flex";
+
+        errorAlert.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+
+
+    /* =====================================================
+       HIDE ERROR
+    ===================================================== */
+
+    function hideError() {
+
+        errorAlert.style.display = "none";
+
+        errorMessage.textContent = "";
+
+    }
+
+
+    /* =====================================================
+       GENERATE APPLICATION ID
+    ===================================================== */
+
+    function generateApplicationId() {
+
+        const now = new Date();
+
+        const year =
+            now.getFullYear();
+
+        const month =
+            String(now.getMonth() + 1)
+                .padStart(2, "0");
+
+        const day =
+            String(now.getDate())
+                .padStart(2, "0");
+
+        const time =
+            String(now.getHours())
+                .padStart(2, "0") +
+            String(now.getMinutes())
+                .padStart(2, "0");
+
+        const random =
+            Math.floor(
+                100 + Math.random() * 900
+            );
+
+        return `SC${year}${month}${day}${time}${random}`;
+
+    }
+
+
+    /* =====================================================
+       FILE VALIDATION
+    ===================================================== */
+
+    documentInput.addEventListener(
+        "change",
+        function () {
+
+            const file =
+                this.files[0];
+
+            if (!file) {
+                return;
+            }
+
+
+            const allowedTypes = [
+
+                "image/jpeg",
+                "image/png",
+                "application/pdf"
+
+            ];
+
+
+            const maxSize =
+                5 * 1024 * 1024;
+
+
+            if (!allowedTypes.includes(file.type)) {
+
+                showError(
+                    "Invalid file type. Please upload JPG, PNG or PDF."
+                );
+
+                this.value = "";
+
+                return;
+
+            }
+
+
+            if (file.size > maxSize) {
+
+                showError(
+                    "File size must be less than 5MB."
+                );
+
+                this.value = "";
+
+                return;
+
+            }
+
+
+            hideError();
+
+        }
+    );
+
+
+    /* =====================================================
+       MOBILE INPUT
+    ===================================================== */
+
+    document
+        .getElementById("mobile")
+        .addEventListener(
+            "input",
+            function () {
+
+                this.value =
+                    this.value
+                        .replace(/\D/g, "")
+                        .slice(0, 10);
+
+            }
+        );
+
+
+    /* =====================================================
+       FORM SUBMIT
+    ===================================================== */
+
+    form.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            hideError();
+
+
+            /* ================= GET VALUES ================= */
+
+            const name =
+                document
+                    .getElementById("applicantName")
+                    .value
+                    .trim();
+
+
+            const mobile =
+                document
+                    .getElementById("mobile")
+                    .value
+                    .trim();
+
+
+            const email =
+                document
+                    .getElementById("email")
+                    .value
+                    .trim();
+
+
+            const service =
+                document
+                    .getElementById("service")
+                    .value;
+
+
+            const address =
+                document
+                    .getElementById("address")
+                    .value
+                    .trim();
+
+
+            const message =
+                document
+                    .getElementById("message")
+                    .value
+                    .trim();
+
+
+            const file =
+                documentInput.files[0];
+
+
+            /* ================= VALIDATION ================= */
+
+
+            if (name.length < 3) {
+
+                showError(
+                    "Please enter your full name."
+                );
+
+                return;
+
+            }
+
+
+            if (!/^[6-9][0-9]{9}$/.test(mobile)) {
+
+                showError(
+                    "Please enter a valid 10-digit Indian mobile number."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                email &&
+                !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+            ) {
+
+                showError(
+                    "Please enter a valid email address."
+                );
+
+                return;
+
+            }
+
+
+            if (!service) {
+
+                showError(
+                    "Please select a service."
+                );
+
+                return;
+
+            }
+
+
+            if (address.length < 10) {
+
+                showError(
+                    "Please enter your complete address."
+                );
+
+                return;
+
+            }
+
+
+            /* =================================================
+               LOADING STATE
+            ================================================= */
+
+            submitBtn.disabled = true;
+
+            submitText.textContent =
+                "Submitting...";
+
+
+            const icon =
+                submitBtn.querySelector("i");
+
+            icon.className =
+                "fa-solid fa-spinner fa-spin";
+
+
+            /* =================================================
+               GENERATE ID
+            ================================================= */
+
+            const generatedID =
+                generateApplicationId();
+
+
+            /* =================================================
+               APPLICATION DATA
+            ================================================= */
+
+            const applicationData = {
+
+                id: generatedID,
+
+                name: name,
+
+                mobile: mobile,
+
+                email: email,
+
+                service: service,
+
+                address: address,
+
+                message: message,
+
+                documentName:
+                    file
+                        ? file.name
+                        : "",
+
+                status:
+                    "Pending",
+
+                submittedAt:
+                    new Date().toISOString()
+
+            };
+
+
+            /* =================================================
+               SAVE DATA
+            ================================================= */
+
+            localStorage.setItem(
+                "saraswatiApplication",
+                JSON.stringify(applicationData)
+            );
+
+
+            /*
+             * Keep these keys too so your existing
+             * track.html can use them.
+             */
+
+            localStorage.setItem(
+                "applicationId",
+                generatedID
+            );
+
+            localStorage.setItem(
+                "applicationName",
+                name
+            );
+
+            localStorage.setItem(
+                "applicationService",
+                service
+            );
+
+            localStorage.setItem(
+                "applicationMobile",
+                mobile
+            );
+
+
+            /* =================================================
+               SMALL DELAY FOR LOADING EFFECT
+            ================================================= */
+
+            setTimeout(function () {
+
+                formCard.style.display =
+                    "none";
+
+
+                applicationId.textContent =
+                    generatedID;
+
+
+                successBox.style.display =
+                    "block";
+
+
+                submitBtn.disabled =
+                    false;
+
+
+                submitText.textContent =
+                    "Submit Application";
+
+
+                icon.className =
+                    "fa-solid fa-paper-plane";
+
+
+                successBox.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+
+            }, 700);
+
+        }
+    );
+
+
+    /* =====================================================
+       RESET FORM
+    ===================================================== */
+
+    form.addEventListener(
+        "reset",
+        function () {
+
+            hideError();
+
+            setTimeout(function () {
+
+                documentInput.value = "";
+
+            }, 50);
+
+        }
+    );
+
+
+    /* =====================================================
+       COPY APPLICATION ID
+    ===================================================== */
+
+    copyBtn.addEventListener(
+        "click",
+        async function () {
+
+            const id =
+                applicationId.textContent.trim();
+
+
+            if (!id || id === "--") {
+                return;
+            }
+
+
+            try {
+
+                await navigator.clipboard.writeText(id);
+
+                const oldText =
+                    copyBtn.innerHTML;
+
+
+                copyBtn.innerHTML =
+                    '<i class="fa-solid fa-check"></i> Copied!';
+
+
+                setTimeout(function () {
+
+                    copyBtn.innerHTML =
+                        oldText;
+
+                }, 1800);
+
+            }
+            catch (error) {
+
+                alert(
+                    "Application ID: " + id
+                );
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       HIDE ERROR WHEN USER STARTS TYPING
+    ===================================================== */
+
+    form.addEventListener(
+        "input",
+        function () {
+
+            if (
+                errorAlert.style.display === "flex"
+            ) {
+
+                hideError();
+
+            }
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
+```

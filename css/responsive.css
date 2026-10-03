@@ -1,0 +1,219 @@
+/* ===================================
+   Tablet (≤992px)
+=================================== */
+
+@media (max-width:992px){
+
+.hero{
+    padding:70px 0;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero img{
+    margin-top:40px;
+}
+
+.top-bar .container{
+    flex-direction:column;
+    gap:10px;
+}
+
+.logo h3{
+    font-size:20px;
+}
+
+.counter .container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.steps{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.service-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.contact .row{
+    gap:30px;
+}
+
+}
+
+
+/* ===================================
+   Mobile (≤768px)
+=================================== */
+
+@media (max-width:768px){
+
+.navbar{
+    padding:15px;
+}
+
+.hero{
+    padding:60px 0;
+}
+
+.hero h1{
+    font-size:34px;
+    line-height:1.3;
+}
+
+.hero p{
+    font-size:16px;
+    line-height:28px;
+}
+
+.hero-btn{
+    flex-direction:column;
+    gap:15px;
+}
+
+.btn1,
+.btn2{
+    width:100%;
+    text-align:center;
+}
+
+.services{
+    padding:60px 0;
+}
+
+.services h2{
+    font-size:32px;
+}
+
+.service-grid{
+    grid-template-columns:1fr;
+}
+
+.counter{
+    padding:50px 0;
+}
+
+.counter .container{
+    grid-template-columns:1fr;
+}
+
+.counter h2{
+    font-size:38px;
+}
+
+.work{
+    padding:60px 0;
+}
+
+.work h2{
+    font-size:32px;
+}
+
+.steps{
+    grid-template-columns:1fr;
+}
+
+.about{
+    padding:60px 0;
+    text-align:center;
+}
+
+.about img{
+    margin-bottom:30px;
+}
+
+.about h2{
+    font-size:30px;
+}
+
+.contact{
+    padding:60px 0;
+}
+
+.contact-info,
+.contact-form{
+    padding:25px;
+}
+
+.footer-links{
+    flex-direction:column;
+    gap:12px;
+}
+
+.social a{
+    margin:6px;
+}
+
+.top-bar{
+    font-size:13px;
+    text-align:center;
+}
+
+.top-bar .right{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.whatsapp-btn,
+.call-btn{
+    width:55px;
+    height:55px;
+    font-size:24px;
+}
+
+}
+
+
+/* ===================================
+   Small Mobile (≤480px)
+=================================== */
+
+@media (max-width:480px){
+
+.hero h1{
+    font-size:28px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.logo h3{
+    font-size:17px;
+}
+
+.logo span{
+    font-size:11px;
+}
+
+.services h2,
+.work h2,
+.about h2{
+    font-size:28px;
+}
+
+.service-card{
+    padding:25px 15px;
+}
+
+.step{
+    padding:25px 15px;
+}
+
+.counter h2{
+    font-size:34px;
+}
+
+footer h2{
+    font-size:26px;
+}
+
+footer p{
+    font-size:14px;
+}
+
+}
