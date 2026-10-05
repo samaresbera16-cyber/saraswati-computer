@@ -1437,7 +1437,14 @@ body::after {
 }
 
 
+.contact-info a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
 
+.contact-info a:hover {
+    color: #ffffff !important;
+}
 
 /*==================================================
   END OF STYLE.CSS
